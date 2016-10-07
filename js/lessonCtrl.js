@@ -5,7 +5,11 @@ angular.module('directivePractice')
   $scope.test = 'Two-way data binding!';
 
   $scope.announceDay = function(lesson, day) {
-    alert(lesson + ' is active on ' + day + '.');
+    if (!day) {
+      alert(lesson + ' is not in the schedule.');
+    } else {
+      alert(lesson + ' is active on ' + day + '.');
+    }
   }
 
 })
